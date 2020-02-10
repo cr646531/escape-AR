@@ -19,7 +19,7 @@ const GamePlay = () => {
           <h1>Setup</h1>
           <div className="button-grid-container">
             <div className="button-grid-item">
-              <a href="http://www.espn.com" ><button className="welcome-btn">Download Markers</button></a>
+              <a href="/#/markers" ><button className="welcome-btn">Print Markers</button></a>
             </div>
           </div>
           <p>

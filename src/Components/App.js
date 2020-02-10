@@ -21,6 +21,7 @@ import Login from './Login';
 import Account from './Account';
 import Signup from './Signup';
 import New from './Room-New';
+import Markers from './Markers';
 
 class App extends Component {
   componentDidMount() {
@@ -54,6 +55,7 @@ class App extends Component {
           <Route path="/signup" render={props => <Signup props={props} />} />
           <Route path="/temp" component={Temp} />
           <Route path="/room" component={Room} />
+          <Route path="/markers" component={Markers} />
           <Route exact path="/room/clock" component={Clock} />
           <Route exact path="/room/lock" component={Lock} />
           <Route exact path="/room/envelope" component={Envelope} />
