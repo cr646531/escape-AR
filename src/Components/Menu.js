@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Component} from 'react';
 import { Link } from 'react-router-dom';
 import Sound from 'react-sound';
 
-import Nav from './Nav';
+import Header from './Header';
 
 
-export default class Enter extends React.Component {
+export default class Menu extends Component {
 
   constructor(){
     super();
@@ -24,7 +24,7 @@ export default class Enter extends React.Component {
       <div>
         <div className="background">
 
-          <Nav />
+          <Header />
 
           <div className="button-grid-container">
 
@@ -35,18 +35,6 @@ export default class Enter extends React.Component {
             <div className="button-grid-item">
               <Link to='/info' ><button className="welcome-btn">Instructions</button></Link>
             </div>
-
-            <div className="button-grid-item">
-              <Link to='/account' ><button className="welcome-btn">Account</button></Link>
-            </div>
-
-            {/* <div className="button-grid-item">
-              <Link to='/opening'><button className="welcome-btn">Opening</button></Link>
-            </div> */}
-
-            {/* <div className="button-grid-item">
-              <Link to='/play'><button className="welcome-btn">Testing</button></Link>
-            </div> */}
 
             {this.state.rain && (
               <div className="button-grid-item">
@@ -63,23 +51,6 @@ export default class Enter extends React.Component {
 
             </div>
         </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
   </div>
   )
     }

@@ -4,7 +4,7 @@ import moment from 'moment';
 
 import Escaped from './Escaped';
 
-export default class Temp extends Component {
+export default class Debug extends Component {
   constructor() {
     super();
     this.state = {

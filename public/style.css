@@ -11,20 +11,6 @@ h1 {
   margin: 0;
 }
 
-.background {
-  /* The image used */
-  background-color: black;
-
-  /* Full height */
-  height: 100vh;
-  min-height: 100vh;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 a {
   color: white;
   font-weight: bold;

@@ -1,22 +1,24 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import Header from './Header';
-import Nav from './Nav';
 
-class App extends Component {
-  
 
-  render() {
+export default class Home extends Component {
+
+  render(){
     return (
-      <div className='background'>
+      <div>
         <Header />
-        <Nav />
+
+        <div className="background">
+          <div className="button-grid-container">
+            <div className="button-grid-item">
+              <Link to='/menu' ><button className="welcome-btn">Continue</button></Link>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
-
 }
-
-
-
-export default App;

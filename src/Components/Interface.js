@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Lock from './Lock';
 import Clock from './Clock';
 import Letter from './Letter';
@@ -9,7 +8,7 @@ import Inventory from './Inventory';
 import Stopwatch from './Stopwatch';
 
 
-export default class Testing extends React.Component {
+export default class Interface extends React.Component {
   constructor(){
     super();
     this.state = {

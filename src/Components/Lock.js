@@ -60,6 +60,8 @@ export default class Lock extends React.Component{
 
     var solution = hour + minute;
 
+    console.log(solution);
+
     //check solution
     if(submission === solution){
       this.props.receiveKey();

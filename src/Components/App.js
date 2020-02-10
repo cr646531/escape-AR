@@ -4,24 +4,18 @@ import { connect } from 'react-redux';
 
 import { exchangeTokenForAuth, getTeams } from '../store';
 
-import Header from './Header';
-import Home from './Home';
-import GamePlay from './GamePlay';
-import Room from './Room';
+import Info from './Info';
 import Clock from './Clock';
 import Lock from './Lock';
 import Envelope from './Envelope';
 import Letter from './Letter';
-import Opening from './Opening';
-import Nav from './Nav';
-import Temp from './Temp';
+import Debug from './Debug';
 import Escaped from './Escaped';
-import Enter from './Enter';
-import Login from './Login';
-import Account from './Account';
-import Signup from './Signup';
-import New from './Room-New';
+import Menu from './Menu';
+import Play from './Play';
 import Markers from './Markers';
+import Home from './Home';
+import Interface from './Interface';
 
 class App extends Component {
   componentDidMount() {
@@ -29,40 +23,22 @@ class App extends Component {
   }
 
   render() {
-    const { auth } = this.props;
-    if (!auth.id) {
-      return (
-        <Router>
-          <div className="background">
-            <Switch>
-              <Route
-                path="/signup"
-                render={props => <Signup props={props} />}
-              />
-              <Route path="/" render={props => <Login props={props} />} />
-            </Switch>
-          </div>
-        </Router>
-      );
-    }
+
     return (
-      //add account Component, finish Success page
       <Router>
         <Fragment>
-          <Route exact path="/" component={Enter} />
-          <Route path="/account" component={Account} />
-          <Route path="/info" component={GamePlay} />
-          <Route path="/signup" render={props => <Signup props={props} />} />
-          <Route path="/temp" component={Temp} />
-          <Route path="/room" component={Room} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/menu" component={Menu} />
+          <Route path="/info" component={Info} />
+          <Route path="/debug" component={Debug} />
+          <Route path="/interface" component={Interface} />
           <Route path="/markers" component={Markers} />
           <Route exact path="/room/clock" component={Clock} />
           <Route exact path="/room/lock" component={Lock} />
           <Route exact path="/room/envelope" component={Envelope} />
           <Route exact path="/room/letter" component={Letter} />
           <Route exact path="/escaped" component={Escaped} />
-          <Route exact path="/opening" component={Opening} />
-          <Route exact path="/play" component={New} />
+          <Route exact path="/play" component={Play} />
         </Fragment>
       </Router>
     );
